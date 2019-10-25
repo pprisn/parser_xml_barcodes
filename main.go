@@ -14,14 +14,6 @@ import (
 	"os"
 )
 
-var b = []byte(`<client><name>Вася</name><birth_date><![CDATA[1.01.2000]]></birth_date></client>`)
-
-type Client struct {
-	XMLName   xml.Name `xml:"client"`
-	Name      string   `xml:"name"`
-	BirthDate string   `xml:"birth_date"`
-}
-
 type Datapacket struct {
 	XMLName     xml.Name `xml:"datapacket"`
 	Text        string   `xml:",chardata"`
